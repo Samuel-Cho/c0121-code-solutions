@@ -1,0 +1,23 @@
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Karla', sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+
+.column-full {
+  text-align: center;
+}
+
+.header {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.header-text {
+  color: #505050;
+  padding: 0 100px;
+  line-height: 1.4rem;
+  font-size: small;
+}
