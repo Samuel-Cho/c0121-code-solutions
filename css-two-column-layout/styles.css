@@ -20,7 +20,8 @@
 }
 
 .header-text {
-  padding: 0 110px;
+  width: 550px;
+  margin: 0 auto;
 }
 
 .header-text,
