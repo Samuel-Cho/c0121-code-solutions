@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.head-row,
+.row-banner,
+.bottom-container,
+.footer-row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu ul,
+.nav-button,
+.footer-links,
+.banner-paragraph,
+.get-started,
+.bottom-container {
+  font-family: 'Avenir', sans-serif;
+}
+
+.banner-head,
+.hero-head {
+  font-family: 'Tiempos Headline', serif;
+}
+
+.footer-links a,
+.get-started {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.banner-paragraph,
+.bottom-info-address {
+  font-size: 1.03rem;
+}
+
+.head-logo,
+.bottom-logo {
+  padding-top: 10px;
+  width: 150px;
+}
+
+/* Head row CSS */
+.head-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+
+.head-title {
+  padding-top: 10px;
+}
+
+.menu {
+  width: 50%;
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu a {
+  color: #a2a2a2;
+  text-decoration: none;
+}
+
+.nav-button {
+  color: white;
+  background-color: #294464;
+  border-style: none;
+  padding: 12px 18px;
+  border-radius: 4px;
+}
+
+/* Banner row CSS */
+.row-banner {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-info {
+  color: #525351;
+}
+
+.banner-head {
+  font-size: 1.3rem;
+}
+
+.get-started {
+  color: white;
+  background-color: #294464;
+  text-decoration: none;
+  border-style: none;
+  padding: 15px 40px;
+  border-radius: 4px;
+}
+
+/* Bottom row CSS */
+.bottom-row {
+  background-color: #525351;
+}
+
+.bottom-container {
+  color: white;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+}
+
+.bottom-info,
+.bottom-link-container {
+  background-color: lightgray;
+}
+
+.bottom-info-address {
+  line-height: 1.75rem;
+  margin-top: 50px;
+}
+
+/* Footer row CSS */
+.footer-row {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #525351;
+  text-decoration: none;
+  margin-right: 30px;
+}
