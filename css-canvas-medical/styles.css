@@ -23,12 +23,15 @@
 .banner-paragraph,
 .get-started,
 .bottom-container,
-.hero-paragraph {
+.hero-paragraph,
+.middle-header-paragraph,
+.middle-body-text {
   font-family: 'Avenir', sans-serif;
 }
 
 .banner-head,
-.hero-head {
+.hero-head,
+.middle-header {
   font-family: 'Tiempos Headline', serif;
 }
 
