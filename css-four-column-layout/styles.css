@@ -1,5 +1,36 @@
-.body-container {
-  width: 800px;
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1300px;
   margin: 0 auto;
+  background-color: lightyellow;
+}
+
+.header-container {
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+}
+
+.body-container {
   display: flex;
+  justify-content: space-evenly;
+}
+
+.column-fourth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.phone-image {
+  height: 400px;
+}
+
+.icon {
+  width: 70px;
 }
