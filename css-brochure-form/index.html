@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Challenge - Brochure Form</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="content">
+    <div class="header">
+      <h2>Learn More</h2>
+    </div>
+    <div class="form">
+      <form>
+        <div class="submission-field">
+          <div class="company-email">
+            <label for="email">Company Email</label>
+            <div>
+              <input type="email" id="email" name="email" placeholder="sally@company.co">
+            </div>
+          </div>
+        </div>
+        <div class="submission-field">
+          <div class="full-name">
+            <label for="name">Name</label>
+            <div>
+              <input type="text" id="name" name="name" placeholder="Sally Smith">
+            </div>
+          </div>
+        </div>
+        <div class="submission-field">
+          <div class="hiring-location">
+            <label for="city-country">Where are you hiring?</label>
+            <div>
+              <input type="text" id="city-country" name="location" placeholder="City, Country">
+            </div>
+          </div>
+        </div>
+        <div class="submission-field">
+          <div class="engineers-number">
+            <label for="engineers">How many engineers are you hiring in the next 6 months?</label>
+            <div>
+              <select name="engineers" id="engineers">
+                <option value="1-2-engineers">1-2 Engineers</option>
+                <option value="3-4-engineers">3-4 Engineers</option>
+                <option value="5-6-engineers">5-6 Engineers</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="submission-field">
+          <div class="submit-button">
+            <button class="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
