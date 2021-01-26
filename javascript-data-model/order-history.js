@@ -4,12 +4,12 @@ var orderHistory = [
       orderPlacedDate: 'August 4, 2020',
       totalPrice: 34.00,
       shipTo: 'JS Masher',
-      orderNumber: '114-3941689-8772232'
+      orderNumber: '114-3941689-8772232',
+      deliveryDetail: null
     },
     orderItems: [
       {
         deliveryDate: 'Aug 8, 2020',
-        deliveryDetail: null,
         itemImage: 'item-image.png',
         itemName: 'JavaScript for impatient programmers',
         itemType: 'Book',
@@ -24,12 +24,12 @@ var orderHistory = [
       orderPlacedDate: 'July 19, 2020',
       totalPrice: 44.53,
       shipTo: 'JS Masher',
-      orderNumber: '113-9984268-1280257'
+      orderNumber: '113-9984268-1280257',
+      deliveryDetail: 'Your package was delivered. It was handed directly to a resident'
     },
     orderItems: [
       {
         deliveryDate: 'Jul 20, 2020',
-        deliveryDetail: 'Your package was delivered. It was handed directly to a resident',
         itemImage: 'item-image.png',
         itemName: 'The Timeless Way of Building',
         itemType: 'Book',
@@ -44,12 +44,12 @@ var orderHistory = [
       orderPlacedDate: 'July 4, 2020',
       totalPrice: 17.22,
       shipTo: 'JS Masher',
-      orderNumber: '114-2875557-9059409'
+      orderNumber: '114-2875557-9059409',
+      deliveryDetail: 'Your package was delivered. It was handed directly to a resident.'
     },
     orderItems: [
       {
         deliveryDate: 'Jul 7, 2020',
-        deliveryDetail: 'Your package was delivered. It was handed directly to a resident.',
         itemImage: 'item-image.png',
         itemName: 'Gamecube Controller Adapter. Super Smash Bros Switch Gamecube Adapter for WII U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamcecube Adapter',
         itemType: 'Electronic',
@@ -63,12 +63,12 @@ var orderHistory = [
       orderPlacedDate: 'July 3, 2020',
       totalPrice: 138.93,
       shipTo: 'JS Masher',
-      orderNumber: '113-2883177-2648248'
+      orderNumber: '113-2883177-2648248',
+      deliveryDetail: null
     },
     orderItems: [
       {
         deliveryDate: 'Jul 5, 2020',
-        deliveryDetail: null,
         itemImage: 'item-image.png',
         itemName: 'GamceCube Controller - Super Smash Bros. Edition (Nintendo Switch)',
         itemType: 'Electronic',
@@ -77,7 +77,6 @@ var orderHistory = [
       },
       {
         deliveryDate: 'Jul 5, 2020',
-        deliveryDetail: null,
         itemImage: 'item-image.png',
         itemName: 'The Art of Sql',
         itemType: 'Book',
