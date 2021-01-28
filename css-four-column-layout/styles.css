@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: 'Barlow', sans-serif;
+}
+
+.header-container {
+  text-align: center;
+  font-weight: 700;
+}
+
+.body-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.column-fourth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-image {
+  height: 400px;
+}
+
+.icon {
+  width: 70px;
+}
+
+.heading-container {
+  font-size: 0.8rem;
+}
+
+.text-container {
+  font-size: 0.8rem;
+}
