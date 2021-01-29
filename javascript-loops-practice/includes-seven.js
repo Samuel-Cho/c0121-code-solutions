@@ -5,6 +5,7 @@ function includesSeven(array) {
   while (i < array.length) {
     if (array[i] === 7) {
       value = true;
+      break;
     }
     i++;
   }
