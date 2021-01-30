@@ -1,10 +1,10 @@
 /* exported getWords */
 function getWords(string) {
-  var String;
+  var word;
   if (string !== '') {
-    String = string.split(' ');
+    word = string.split(' ');
   } else {
-    String = [];
+    word = [];
   }
-  return String;
+  return word;
 }
