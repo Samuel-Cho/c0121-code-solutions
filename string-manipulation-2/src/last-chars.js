@@ -1,13 +1,11 @@
 /* exported lastChars */
 function lastChars(length, string) {
   var lastString = '';
-  var lengthCount = length;
   var stringIndex = string.length - 1;
-  while (lengthCount > 0) {
+  for (var i = 0; i < length; i++) {
     if (string[stringIndex]) {
       lastString = string[stringIndex] + lastString;
       stringIndex--;
-      lengthCount--;
     } else {
       break;
     }
