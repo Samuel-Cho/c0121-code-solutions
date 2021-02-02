@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+}
+
+.open-modal-button,
+.modal-button {
+  border-style: none;
+  border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  color: white;
+}
+
+.hidden-modal {
+  height: 200px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 420px;
+  margin: 0 auto;
+}
+
+.open-modal-button {
+  background-color: #4a49e9;
+}
+
+.modal-button {
+  background-color: #eb5d5d;
+}
