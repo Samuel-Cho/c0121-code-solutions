@@ -5,7 +5,7 @@ function lightSwitch(event) {
   if ($lightBulb.className === 'light-bulb bulb-on') {
     $lightBulb.className = 'light-bulb bulb-off';
     $lightRoom.className = 'light-off';
-  } else if ($lightBulb.className === 'light-bulb bulb-off') {
+  } else {
     $lightBulb.className = 'light-bulb bulb-on';
     $lightRoom.className = 'light-on';
   }
