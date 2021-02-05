@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+  font-family: 'Courier Prime', monospace;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.default.position {
+  border-bottom: 0.35rem solid;
+}
+
+.correct {
+  color: lightgreen;
+}
+
+.incorrect.position {
+  color: red;
+  border-bottom: 0.35rem solid;
+}
