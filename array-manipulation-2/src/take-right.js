@@ -1,12 +1,12 @@
 /* exported takeRight */
 function takeRight(array, count) {
   var takeRightArray = [];
-  for (var i = array.length - count; i < array.length; i++) {
-    if (array.length > 0) {
+
+  if (array.length !== 0) {
+    for (var i = array.length - count; i < array.length; i++) {
       takeRightArray.push(array[i]);
-    } else {
-      break;
     }
   }
+
   return takeRightArray;
 }
