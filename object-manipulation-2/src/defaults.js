@@ -5,12 +5,10 @@ function defaults(target, source) {
     for (var sourceProp in source) {
       if (Object.keys(target).length !== 0) {
 
-        for (var targetProp in target) {
-          if (sourceProp === targetProp) {
-            return target; // Line means nothing, had to leave computer, added so commit would go through.
-          } else {
-            target[sourceProp] = source[sourceProp];
-          }
+        if (sourceProp in target) {
+          continue;
+        } else {
+          target[sourceProp] = source[sourceProp];
         }
 
       } else {
