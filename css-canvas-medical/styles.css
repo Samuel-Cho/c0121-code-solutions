@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+/* Group + multi-used selectors */
+.head-container,
+.row-banner,
+.bottom-container,
+.footer-row,
+.hero-image-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.menu ul,
+.nav-button,
+.footer-links,
+.banner-paragraph,
+.get-started,
+.bottom-container,
+.hero-paragraph,
+.middle-header-paragraph,
+.middle-body-text {
+  font-family: 'Avenir', sans-serif;
+}
+
+.banner-head,
+.hero-head,
+.middle-header {
+  font-family: 'Tiempos Headline', serif;
+}
+
+.footer-links a,
+.get-started,
+.bottom-link-column,
+.middle-body-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.banner-paragraph,
+.bottom-info-address,
+.nav-head,
+.nav-button,
+.middle-header-paragraph {
+  font-size: 1.03rem;
+}
+
+.banner-info,
+.middle-container {
+  color: #6e6e6e;
+}
+
+.banner-head,
+.middle-header {
+  font-size: 1.3rem;
+}
+
+.head-logo,
+.bottom-logo {
+  padding-top: 10px;
+  width: 150px;
+}
+
+.nav-button,
+.get-started {
+  color: white;
+  background-color: #294464;
+  border-style: none;
+  border-radius: 4px;
+}
+
+.get-started {
+  text-decoration: none;
+  padding: 15px 45px;
+}
+
+.head-row,
+.middle-row {
+  border-bottom: 1px solid lightgray;
+}
+
+/* Head row CSS */
+.head-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-title {
+  padding-top: 10px;
+}
+
+.menu {
+  width: 50%;
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu a {
+  color: #a2a2a2;
+  text-decoration: none;
+}
+
+.nav-button {
+  padding: 12px 18px;
+}
+
+/* Hero row CSS */
+.hero-row {
+  padding: 5em 0;
+}
+
+.hero-image-container {
+  color: white;
+  background-image: linear-gradient(rgba(95, 95, 95, 0.4), rgba(95, 95, 95, 0.4)), url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 590px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-info-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.hero-head {
+  width: 400px;
+}
+
+.hero-paragraph {
+  line-height: 1.75rem;
+  width: 520px;
+}
+
+/* Middle row CSS */
+.middle-row {
+  background-color: #fafafa;
+  text-align: center;
+  height: 550px;
+}
+
+.middle-header-container {
+  height: 270px;
+  width: 520px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.middle-header-paragraph {
+  line-height: 1.75rem;
+}
+
+.middle-body-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.middle-body-text {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+/* Banner row CSS */
+.row-banner {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Bottom row CSS */
+.bottom-row {
+  background-color: #525351;
+}
+
+.bottom-container {
+  color: white;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-info-address {
+  line-height: 1.75rem;
+  margin-top: 50px;
+}
+
+.bottom-link-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 600px;
+}
+
+.bottom-link-item {
+  margin: 20px 0;
+}
+
+.bottom-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Footer row CSS */
+.footer-row {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #525351;
+  text-decoration: none;
+  margin-right: 30px;
+}
