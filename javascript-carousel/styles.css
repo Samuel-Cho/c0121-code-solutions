@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.carousel {
+  border: 2px solid black;
+  width: 800px;
+  height: 400px;
+  position: relative;
+}
+
+.picture-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture {
+  height: 75%;
+  object-fit: contain;
+}
+
+.icon-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chevron-container {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto, 0;
+}
+
+.dot-container-top {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: space-between;
+  width: 175px;
+  margin: 0 auto;
+}
+
+.fa-circle {
+  font-size: 1.05rem;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 2.5rem;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover,
+.fa-circle:hover {
+  cursor: pointer;
+}
