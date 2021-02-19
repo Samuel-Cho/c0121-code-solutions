@@ -230,18 +230,38 @@ var deck = [
   }
 ];
 
-function dealCards(deck) {
-  for (var i = 0; i < 2; i++) {
-    var randomNumber = Math.random();
-    randomNumber = randomNumber * deck.length;
-    var randomIndex = Math.floor(randomNumber);
-    console.log('randomIndex:', randomIndex);
-    var dealedCard = deck[randomIndex];
-    console.log('dealedCard:', dealedCard);
+var shuffledDeck = _.shuffle(deck);
+
+function dealCards(shuffledDeck) {
+  var dealedCards = [];
+  var dealedCardsIndex = 0;
+  for (var i = 0; i < players.length * 2; i++) {
+    dealedCards.push(shuffledDeck[i]);
   }
+  for (var j in players) {
+    for (var k = 0; k < 2; k++) {
+      players[j].hand.push(dealedCards[dealedCardsIndex]);
+      dealedCardsIndex++;
+    }
+  }
+  console.log('dealedCards', dealedCards);
 }
 
+dealCards(shuffledDeck);
+console.log('players', players);
+
+// function dealCards(deck) {
+//   for (var i = 0; i < 2; i++) {
+//     var randomNumber = Math.random();
+//     randomNumber = randomNumber * deck.length;
+//     var randomIndex = Math.floor(randomNumber);
+//     console.log('randomIndex:', randomIndex);
+//     var dealedCard = deck[randomIndex];
+//     console.log('dealedCard:', dealedCard);
+//   }
+// }
+
 // ignore commands below, wrote so commit would go through
-console.log(players);
-console.log(deck);
-console.log('dealt cards:', dealCards(deck));
+// console.log(players);
+// console.log(deck);
+// console.log('dealt cards:', dealCards(deck));
