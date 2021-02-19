@@ -20,10 +20,10 @@ $chevronContainer.addEventListener('click', function (event) {
   if (event.target.matches('i')) {
     clearInterval(intervalID);
     if (event.target.className === 'fas fa-chevron-right') {
-      if (dotIndex === 4) {
+      if (dotIndex === $faCircle.length - 1) {
         dotIndex = 0;
         $picture.setAttribute('src', imgList[dotIndex]);
-        $faCircle[4].className = 'far fa-circle';
+        $faCircle[$faCircle.length - 1].className = 'far fa-circle';
         $faCircle[0].className = 'fas fa-circle';
       } else {
         dotIndex++;
@@ -33,10 +33,10 @@ $chevronContainer.addEventListener('click', function (event) {
       }
     } else if (event.target.className === 'fas fa-chevron-left') {
       if (dotIndex === 0) {
-        dotIndex = 4;
+        dotIndex = $faCircle.length - 1;
         $picture.setAttribute('src', imgList[dotIndex]);
         $faCircle[0].className = 'far fa-circle';
-        $faCircle[4].className = 'fas fa-circle';
+        $faCircle[$faCircle.length - 1].className = 'fas fa-circle';
       } else {
         dotIndex--;
         $picture.setAttribute('src', imgList[dotIndex]);
@@ -65,10 +65,10 @@ $dotContainer.addEventListener('click', function (event) {
 });
 
 function rotateCarousel() {
-  if (dotIndex === 4) {
+  if (dotIndex === $faCircle.length - 1) {
     dotIndex = 0;
     $picture.setAttribute('src', imgList[dotIndex]);
-    $faCircle[4].className = 'far fa-circle';
+    $faCircle[$faCircle.length - 1].className = 'far fa-circle';
     $faCircle[0].className = 'fas fa-circle';
   } else {
     dotIndex++;
