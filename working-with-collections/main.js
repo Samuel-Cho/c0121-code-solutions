@@ -244,24 +244,30 @@ function dealCards(shuffledDeck) {
       dealedCardsIndex++;
     }
   }
-  console.log('dealedCards', dealedCards);
 }
 
 dealCards(shuffledDeck);
-console.log('players', players);
 
-// function dealCards(deck) {
-//   for (var i = 0; i < 2; i++) {
-//     var randomNumber = Math.random();
-//     randomNumber = randomNumber * deck.length;
-//     var randomIndex = Math.floor(randomNumber);
-//     console.log('randomIndex:', randomIndex);
-//     var dealedCard = deck[randomIndex];
-//     console.log('dealedCard:', dealedCard);
-//   }
-// }
+function findWinner(players) {
+  var winner = null;
+  var winningHand = 0;
+  for (var x = 0; x < players.length; x++) {
+    var handValue = 0;
+    for (var l = 0; l < players[x].hand.length; l++) {
+      if (typeof players[x].hand[l].rank === 'number') {
+        handValue += players[x].hand[l].rank;
+      } else if (players[x].hand[l].rank === 'Ace') {
+        handValue += 11;
+      } else {
+        handValue += 10;
+      }
+    }
+    if (handValue > winningHand) {
+      winningHand = handValue;
+      winner = players[x].name;
+    }
+  }
+  console.log('The winner is', winner);
+}
 
-// ignore commands below, wrote so commit would go through
-// console.log(players);
-// console.log(deck);
-// console.log('dealt cards:', dealCards(deck));
+findWinner(players);
