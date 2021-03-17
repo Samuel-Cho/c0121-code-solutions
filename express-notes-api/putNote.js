@@ -19,8 +19,9 @@ const putNote = (req, res) => {
     fs.writeFile('data.json', JSON.stringify(data, null, 2), 'utf8', (err) => {
       if (err) {
         res.status(500).json(error3);
+      } else {
+        res.status(200).json(data.notes[req.params.id]);
       }
-      res.status(200).json(data.notes[req.params.id]);
     });
   }
 };

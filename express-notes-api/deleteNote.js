@@ -12,8 +12,9 @@ const deleteNote = (req, res) => {
       fs.writeFile('data.json', JSON.stringify(data, null, 2), 'utf8', (err) => {
         if (err) {
           res.status(500).json(error2);
+        } else {
+          res.status(204).end();
         }
-        res.status(204).end();
       });
     } else {
       const error2 = {
