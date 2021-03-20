@@ -10,6 +10,7 @@ const db = new pg.Pool({
 const getGrades = require('./getGrades');
 const postGrade = require("./postGrade");
 const putGrade = require('./putGrade');
+const deleteGrade = require('./deleteGrade');
 
 app.listen(3000, () => {
   console.log('Listening on port 3000!');
@@ -27,4 +28,8 @@ app.post('/api/grades', (req, res) => {
 
 app.put('/api/grades/:gradeId', (req, res) => {
   putGrade(req, res, db);
+});
+
+app.delete('/api/grades/:gradeId', (req, res) => {
+  deleteGrade(req, res, db);
 });
