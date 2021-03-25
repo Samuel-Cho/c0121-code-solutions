@@ -1,0 +1,44 @@
+button {
+  font-size: 1.2rem;
+  width: 200px;
+  height: 70px;
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+  background-color: rgb(49, 0, 49);
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+.three {
+  background-color: #351c74;
+}
+
+.six {
+  background-color: #674ea8;
+}
+
+.nine {
+  background-color: #e06667;
+}
+
+.twelve {
+  background-color: #f6b26a;
+  color: black;
+}
+
+.fifteen {
+  background-color: #fcff00;
+  color: black;
+}
+
+.eighteen {
+  background-color: white;
+  color: black;
+}
