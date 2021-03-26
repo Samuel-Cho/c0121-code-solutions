@@ -1,0 +1,54 @@
+button {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+.slider-container{
+  height: 50px;
+  width: 90px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.slider-off {
+  background-color: lightgray;
+}
+
+.slider-on {
+  background-color: lime;
+}
+
+.container {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.on {
+ position: absolute;
+ top: 0;
+ right: 0;
+}
+
+.off {
+  position: absolute;
+  top: 0;
+}
+
+button:hover,
+p:hover,
+.slider-container:hover {
+  cursor: pointer;
+}
