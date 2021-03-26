@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+}
+
+
+
+.fas {
+  font-size: 1.3rem;
+}
+
+.fas:focus {
+  outline: none;
+}
+
+.fas:hover {
+  cursor: pointer;
+}
