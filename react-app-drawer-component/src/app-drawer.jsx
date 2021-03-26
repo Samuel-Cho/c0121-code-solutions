@@ -1,5 +1,5 @@
-import React from 'react',
-import ReactDOM from 'reacto-dom',
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 export default class AppDrawer extends React.Component {
   constructor(props) {
@@ -23,12 +23,12 @@ export default class AppDrawer extends React.Component {
       return (
         <div className="container">
           <div className="menu-container">
-            <h3>Menu</h3>
-            <ol>
+            <h2>Menu</h2>
+            <ul>
               <li onClick={this.handleClick}>About</li>
               <li onClick={this.handleClick}>Get Started</li>
               <li onClick={this.handleClick}>Sign In</li>
-            </ol>
+            </ul>
           </div>
           <div className="modal" onClick={this.handleClick}></div>
         </div>

@@ -1,10 +1,10 @@
-import React from 'react',
-import ReactDOM from 'reacto-dom',
+import React from 'react';
+import ReactDOM from 'react-dom';
 import AppDrawer from './app-drawer';
 
 class CustomAppDrawer extends React.Component {
   render() {
-    <AppDrawer />
+    return <AppDrawer />
   }
 }
 
