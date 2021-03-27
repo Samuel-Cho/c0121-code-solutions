@@ -7,24 +7,28 @@ export default class Accordion extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  TabItems(props) {
-    return (
-      <>
-        <div className='tab' data-view={props.key} onClick={this.handleClick}>{props.name}</div>
-        <div className='tab-text' data-view={props.key}>{props.text}</div>
-      </>
-    );
-  }
-
   handleClick() {
+    if (event.target.matches('.tab')) {
+      if (this.state.view !== event.target['data-view']) {
+        this.setState({ view: event.target['data-view'] });
+        const textBox = event.target.closest('.tab-text');
 
+      }
+
+    }
   }
 
-  render(props) {
-    const languages = props.languages;
+  render() {
+    const languages = this.props.languages;
     const divItems = languages.map((language) => {
-      return <TabItems key={language.id} name={language.name} text={language.text} />
+      return (
+        <div onClick={this.handleClick} className='language' key={language.id}>
+          <div className='tab' data-view={language.id} onClick={language.handleClick}>{language.name}</div>
+          <div className='hidden tab-text' data-view={language.id}>{language.text}</div>
+        </div>
+      );
     });
+    // add divItems to state??
     return <div className="tab-container">{divItems}</div>
   }
 }
