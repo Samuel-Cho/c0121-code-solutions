@@ -1,0 +1,23 @@
+.hidden {
+  display: none !important;
+}
+
+.tab-container {
+  width: 350px;
+}
+
+.tab {
+  border: 1px solid black;
+  font-size: 1.3rem;
+  padding: 5px;
+  background: lightgray;
+}
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.tab-text {
+  border: 1px solid black;
+  padding: 5px;
+}
