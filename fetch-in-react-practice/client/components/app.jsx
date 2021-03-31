@@ -49,8 +49,8 @@ export default class App extends React.Component {
     })
       .then(response => response.json())
       .then(todo => {
-        this.state.todos.push(todo)
-        this.setState({todos: this.state.todos})
+        const todos = this.state.todos.concat(todo);
+        this.setState({todos: todos})
       })
       .catch(err => console.error(err));
   }
@@ -87,9 +87,10 @@ export default class App extends React.Component {
       body: JSON.stringify(isCompletedOpposite)
     })
       .then(response => response.json())
-      .then(data => {
-        this.state.todos[index].isCompleted = isCompletedOpposite.isCompleted;
-        this.setState({todos: this.state.todos})
+      .then(updatedTodo => {
+        const newTodos = this.state.todos.slice();
+        newTodos[index] = updatedTodo
+        this.setState({todos: newTodos})
 
       })
       .catch(err => console.error(err));
