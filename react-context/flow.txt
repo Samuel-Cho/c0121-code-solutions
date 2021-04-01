@@ -1,0 +1,55 @@
+1. User can sign up
+  - User can click on 'Register now' or 'Sign Up' anchor elements
+    - Register now link causes const alternateActionHref in auth-form.jsx to change to #sign-up
+    - Sign Up anchor element changes hash to  #sign-up
+  - Window event listener in app.jsx changes this.state.route value, app.jsx renders again, calls Auth component, and component calls AuthForm component to render form with sign-up content instead of sign instead.
+  - As user inputs username and password in the form fields, handleChange method in AuthForm class changes the username and password properties of the state.
+  - Clicking on Register button caused handleSubmit method on AuthForm to activate fetch method andd approriate then method on its return.
+    - Client sends request to server with pathway '/api/auth/sign-up', server (index.js) calls appropriate post method.
+    - POST method sent to database to add the submitted user information and create a new row
+      - argon2 package is used to hash the password and the returned hashed password is insterted to database instead of what the user actually typed for password.
+  - Hash is changed to 'sign-in' and page renders again calling Auth component, calling AuthForm component to show form with sign in content.
+
+2. User can sign in
+  - As user inputs username and password in the form fields, handleChange method in AuthForm class changes the username and password properties of the state.
+  - Clicking on 'Log In' button caused handleSubmit method on AuthForm to activate fetch method and appropriate then method on its return.
+    - Client sends request to server with pathway '/api/auth/sign-in', server (index.js) calls appropriate post method.
+    - POST method is sent to database to retrieve row in database with matching username
+    - If found, argon2 package is used to verify password submitted will match the hashed password in database when hashed
+    - If verified, server will return json containing token and user payload retrieved from the database
+    - onSignIn method of the Auth component is called, calling the handleSignIn method of the App component with the results of the then method of the fetch as the argument
+  - handleSignIn saves the token to local storage and updates the user property of the state
+  - Because user property exist in AppContext (render in app.jsx) AuthPage component calls Redirect commponent, changing url.hash to '#' and changing window url
+  - renderPage method of App component will call Home component, returning React element as child for PageContainer component, returning React element to render on DOM
+  - componentDidMount method of App component runs, adding event listener and updating state user and isAuthroizing property
+
+3. User can stay signed in (even if they refreshed the page).
+  - Page refreshes,
+  - Index.jsx calls App component,
+  - render method is called, renderPage method is called,
+  - Home component is called,
+  - user property of context doesn't exist so Redirect component is called with to="sign-in,
+  - Redirect changes url and returns null,
+  - componentDidMount method is called and grabs local storage ,
+  - render method calls renderPage method again, path is now 'sign-in' calling Auth component,
+  - since user propety of context now exists, Redirect component is called with to="",
+  - hash is changed adding route property to state due to event listener in App component,
+  - render method is called in App component,
+  - Calls renderPage method, condition now calls Home component,
+  - Since user porperty of context exists, returns react element holding div with gif,
+  - React element is then rendered to Dom in index.jsx.
+
+4. User can sign out
+  - Since user property exists in context, NaveBar component generates Sign out button
+  - User clicks button and handleSignOut method is called
+  - local storage is removes token and user property of state is null
+  - render method of App component is called, calling renderPage method, calling Home component
+  - Since user property no longer exists in context, Redirect component is called with to="sign-in"
+  - Redirect component changes url and null returned
+  - Event listener changes route property of state
+  - componentDidMount method is called in App component
+  - Since local storage was cleared, token is now undefined, assigning null to user property of state
+  - render method is called again, calling renderPage method, now calling Auth component as path ==='sign-in' due to Redirect component and event listener
+  - Auth component renders and calls AuthForm component, returning React element with 'sign-in' content
+  - React element from Auth is returned, React element from PageContainer component is returned from App component to index.jsx
+  - index.jsx renders returned React element to DOM.
